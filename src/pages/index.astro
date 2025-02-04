@@ -1,27 +1,7 @@
 ---
-import Header from '../components/header.astro'
-import Footer from '../components/footer.astro'
+import BaseLayout from "@layouts/BaseLayout.astro"
 const pageTitle = 'Astro Decouverte'
-const mainColor = "#0f0015";
-const tonicColor = "#fcf4ff";
-import '../styles/global.css';
 ---
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-    <style define:vars={{mainColor:mainColor, tonicColor:tonicColor}}>
-    </style>
-  </head>
-  <body>
-	<Header/>
-	<main>
-		<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
 		<p>Direction l'espace</p>
-	</main>
-  <Footer/>
-  </body>
-</html>
+</BaseLayout>

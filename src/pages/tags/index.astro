@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const pageTitle = "Répertoire des étiquettes";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div class="tags">
+        {tags.map((tag) => (
+            <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+          ))}
+    </div>
+</BaseLayout>
+<style>
+    a {
+      color: #00539F;
+    }
+  
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .tags>p>a {
+        color: #000;
+        text-decoration: none;
+    }
+  
+    .tag {
+      margin: 0.5em;
+      border: dotted 1px #4d0060;
+      border-radius: .5em;
+      padding: .2em 1em;
+      font-size: 1.15em;
+      background-color: #8b00ad;
+    }
+  </style>

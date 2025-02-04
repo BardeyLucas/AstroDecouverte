@@ -1,17 +1,14 @@
 ---
-title: 'Ma première étoile'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'Chanson des étoiles'
 pubDate: 2024-02-03
-description: "Je vais vous parler d'un de mes rêves."
+description: "Je vais vous chanter ma douce mélodie"
 author: 'Lucas Bardey'
 image:
-    url: 'http://localhost:4321/posts/post-1/assets/EtoileJaune.avif'
+    url: 'http://localhost:4321/src/components/img/EtoileJaune.avif'
     alt: "ETOILE"
-tags: ["astro", "blogging", "apprentissage en public"]
+tags: ["Chanson"]
 ---
-# Mon premier article de blog
-
-Publié le : 2024-02-03
-
 ---
 ## Chanson sur les étoiles
 
