@@ -1,5 +1,25 @@
 ---
 import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
+const pageTitle = 'A propos de mes étoiles'
+
+const identity = {
+  firstName: "Petite nétoile",
+  country: "TOGO",
+  occupation: "étudiant :D",
+  hobbies: ["Les étoiles", "Les étoiles jaunes", "Les étoiles de toutes les couleurs", "Feur"],
+};
+
+const skills = ["Faire mes lacets", "Compté les étoils", "Compté jusqu'a 4", "La physique quantique :)"];
+
+const happy = true;
+const finished = false;
+const goal = 1;
+
+const mainColor = "#0f0015";
+const tonicColor = "#fcf4ff";
+
+import '../styles/global.css';
 ---
 <html lang="fr">
   <head>
@@ -7,19 +27,41 @@ import Header from '../components/header.astro'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
+    <title>{pageTitle}</title>
+    <style define:vars={{mainColor:mainColor, tonicColor:tonicColor}}>
+    </style>
   </head>
   <body>
     <Header/>
     </main>
-        <h1>A propos de mes étoiles</h1>
+        <h1>{pageTitle}</h1>
         <p>Je n'est pas d'étoiles finalement... <a href="https://repertoire-des-etoiles.fr/">Acheter</a> moi en ;(</p>
+        <img src="/src/assets/EtoileJaune.avif" alt="Une étoile" />
         <section>
         <h2>Pourquoi m'acheter des étoiles ?</h2>
         <p>Les étoiles ont toujours fasciné l'humanité. Elles représentent des rêves, des espoirs et des aspirations. En m'achetant une étoile, vous pouvez immortaliser un moment spécial, m'honorer simplement m'aider à posséder une part du ciel nocturne.</p>
         <p>De plus, acheter une étoile est un cadeau unique et mémorable. C'est une manière de me montrer combien je compte pour vous. Chaque étoile est unique, tout comme moi.</p>
         <p>Alors, pourquoi ne pas ajouter un peu de magie à ma vie en m'achetant une étoile aujourd'hui ?</p>
         </section>
+        <h2>Mais qui suis-je ?</h2>
+        <ul>
+          <li>Je m'appelle {identity.firstName}.</li>
+          <li>Je vie en {identity.country} et je travail comme {identity.occupation}.</li>
+          <!--Vérifie sur ils posséde au moins 2 hobbies -->
+          {identity.hobbies.length >= 3 &&
+            <li>Mes hobbies sont : {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+          }
+        </ul>
+        <p>Mes compétences sont :</p>
+        <ul>
+          {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+        {happy && <p>J'ai hate de trouver des étoiles !</p>}
+
+        {finished && <p>J'en est enfin trouver !</p>}
+
+        {goal <= 1 ? <p>Je pense y arrivé cette année !</p> : <p>Aba ce sera plus long</p>}
     </main>
+    <Footer/>
   </body>
 </html>

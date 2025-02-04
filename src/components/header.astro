@@ -1,8 +1,30 @@
 <header>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header{
+            height:80px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        nav nav {
+            justify-content: end;
+            gap: 20px;
+        }
+
+
+    </style>
     <nav>
-        <a href="/">Accueil</a>
-        <a href="/about/">À propos</a>
-        <a href="/posts/post-1">Ma première étoile</a>
-        <a href="/posts/post-2">Chanson</a>
+        <a href="/"><img src="/src/assets/LogoDuSite.jpg"/></a>
+        <nav>
+            <a href="/about/">À propos</a>
+            <a href="/posts/post-1">Ma première étoile</a>
+            <a href="/posts/post-2">Chanson</a>
+        </nav>
     </nav>
 </header>
