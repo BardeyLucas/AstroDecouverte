@@ -1,3 +1,17 @@
+---
+import Social from './Social.astro';
+---
 <footer>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
     <img src="/src/assets/Footer.jpg"/>
+    <nav>
+        <Social platform="twitter" username="astrodotbuild" />
+        <Social platform="github" username="withastro" />
+        <Social platform="youtube" username="astrodotbuild" />
+    </nav>
 </footer>
