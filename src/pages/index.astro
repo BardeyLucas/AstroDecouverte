@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro"
+import Greeting from '../components/Greeting.jsx';
 const pageTitle = 'Astro Decouverte'
 ---
 <BaseLayout pageTitle={pageTitle}>
 		<h2>Direction l'espace</h2>
+		<Greeting client:load messages={["Salut", "Bonjour", "Aloa", "Coucou", "Hello", "Bienvenu"]} />
 		<span>
 			<p>Ne prêter pas attention aux textes, je m'êtait amuser à mettre le plus des bétise sur le site avant d'apprendre qu'il fallait le rendre...</p>
 			<p>Celà m'apprendra à vouloir m'occupé en attendent que le cours avance. 😂</p>

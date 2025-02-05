@@ -42,3 +42,7 @@ body {
     padding: 0;
     background: none;
   }
+
+  #greeting>button{
+    color: white;
+  }
