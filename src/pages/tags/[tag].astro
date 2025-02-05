@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import BlogPost from '@components/BlogPost.astro';
 
 export async function getStaticPaths() {
 const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
@@ -19,6 +20,6 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={tag}>
   <p>Articles étiquetés avec <b>{tag}</b></p>
   <ul>
-    {posts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    {posts.map((post: any) => <li><BlogPost url={post.url} title={post.frontmatter.title}/></li>)}
   </ul>
 </BaseLayout>
