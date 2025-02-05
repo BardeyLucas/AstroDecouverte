@@ -4,6 +4,8 @@ const tonicColor = "#fcf4ff";
 import Hamburgeur from "./Hamburgeur.astro"
 import Navigation from "./Navigation.astro"
 import ThemeIcon from './ThemeIcon.astro';
+import { Image } from 'astro:assets';
+import LogoDuSite from '@components/img/logoDuSite.jpg';
 ---
 <script>
 import "../scripts/menu.js";
@@ -16,13 +18,13 @@ import "../scripts/menu.js";
         padding-left: 16px;
         margin-right: -16px;
         padding-right: 16px;
-        max-width: 608px;
         background-color: var(--mainColor);
         position: fixed;
         top: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: absolute;
     }
     img{
         width: 50px;
@@ -31,7 +33,7 @@ import "../scripts/menu.js";
 
 </style>
 <header>
-    <a href="/"><img src="/src/components/img/LogoDuSite.jpg"/></a>
+    <a href="/"><Image src={LogoDuSite} alt="logo"/></a>
     <ThemeIcon/>
     <nav>        
         <Navigation/>
