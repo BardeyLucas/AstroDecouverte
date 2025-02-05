@@ -11,7 +11,11 @@ import "../scripts/menu.js";
 <style>
     header{
         height:80px;
-        width: calc(100vw - 32px);
+        width: 100vw;
+        margin-left: -16px;
+        padding-left: 16px;
+        margin-right: -16px;
+        padding-right: 16px;
         max-width: 608px;
         background-color: var(--mainColor);
         position: fixed;
@@ -24,9 +28,11 @@ import "../scripts/menu.js";
         width: 50px;
         height: 50px;
     }
+
 </style>
 <header>
     <a href="/"><img src="/src/components/img/LogoDuSite.jpg"/></a>
+    <ThemeIcon/>
     <nav>        
         <Navigation/>
         <Hamburgeur/>
