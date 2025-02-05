@@ -11,4 +11,4 @@ tags: ["Pas lui"]
 ---
 ---
 ## Tu aurais du m'écouter
-<img src="/src/components/img/PasLui.png">
+<p>Bizzarement j'ai préféré supprimé le contenus de cette page... (c'était une étoile de mer)</p>

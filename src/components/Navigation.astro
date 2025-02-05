@@ -3,7 +3,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 10px;
     }
     img{
         width: 50px;
@@ -15,19 +14,43 @@
         }
     }
     .nav-links {
-        justify-content: end;
+        top: 80px;
         gap: 20px;
         margin-top: 0;
         display: none;
+        position: absolute;
+        width: calc(100vw - 32px);
+        max-width: 608px;
+        background: black;
+        z-index: 20;
+        left: 0;
     }
 
-    @media screen and (min-width: 600px) {
-            .nav-links {visibility: visible;
-            display: flex;}
+    .nav-links a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .expanded {
+        display: unset;
+    }
+
+    @media screen and (min-width: 650px) {
+            .nav-links {
+            display: flex;
+            justify-content: end;
+            
+        }
     }
 </style>
-<nav class="nav-links">
+<div class="nav-links">
     <a href="/about/">À propos</a>
     <a href="/posts/post-1">Ma première étoile</a>
     <a href="/posts/post-2">Chanson</a>
-</nav>
+</div>

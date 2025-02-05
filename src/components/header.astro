@@ -5,7 +5,7 @@ import Hamburgeur from "./Hamburgeur.astro"
 import Navigation from "./Navigation.astro"
 ---
 <script>
-
+import "../scripts/menu.js";
 </script>
 <style>
     header{
@@ -26,6 +26,8 @@ import Navigation from "./Navigation.astro"
 </style>
 <header>
     <a href="/"><img src="/src/components/img/LogoDuSite.jpg"/></a>
-    <Navigation/>
-    <Hamburgeur/>
+    <nav>        
+        <Navigation/>
+        <Hamburgeur/>
+    </nav>
 </header>
